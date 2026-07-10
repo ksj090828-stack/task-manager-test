@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>과제 관리 웹앱</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>과제 관리 웹앱</h1>
+      <p>AI 활용 선행 테스트용 HTML/CSS/JavaScript 웹앱</p>
+    </header>
+
+    <section class="input-section">
+      <h2>과제 추가</h2>
+
+      <div class="form-row">
+        <input 
+          type="text" 
+          id="taskInput" 
+          placeholder="과제 이름을 입력하세요"
+        />
+
+        <select id="subjectInput">
+          <option value="국어">국어</option>
+          <option value="수학">수학</option>
+          <option value="영어">영어</option>
+          <option value="과학">과학</option>
+          <option value="사회">사회</option>
+          <option value="기타">기타</option>
+        </select>
+
+        <input 
+          type="date" 
+          id="dateInput"
+        />
+
+        <button id="addBtn">추가</button>
+      </div>
+
+      <p id="message" class="message"></p>
+    </section>
+
+    <section class="control-section">
+      <h2>필터</h2>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">전체</button>
+        <button class="filter-btn" data-filter="active">미완료</button>
+        <button class="filter-btn" data-filter="completed">완료</button>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stat-card">
+        <span>전체 과제</span>
+        <strong id="totalCount">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>완료</span>
+        <strong id="completedCount">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>미완료</span>
+        <strong id="activeCount">0</strong>
+      </div>
+    </section>
+
+    <section class="list-section">
+      <h2>과제 목록</h2>
+      <ul id="taskList"></ul>
+      <p id="emptyText" class="empty-text">아직 등록된 과제가 없습니다.</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
